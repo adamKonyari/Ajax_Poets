@@ -20,4 +20,18 @@ abstract class AbstractServlet extends HttpServlet {
         return dataSource.getConnection();
     }
 
+    void sendMessage(HttpServletResponse resp, int status, String message) throws IOException {
+        sendMessage(resp, status, new MessageDto(message));
+    }
+
+    void sendMessage(HttpServletResponse resp, int status, Object object) throws IOException {
+        resp.setStatus(status);
+        om.writeValue(resp.getOutputStream(), object);
+    }
+
+    void handleSqlError(HttpServletResponse resp, SQLException ex) throws IOException {
+        sendMessage(resp, HttpServletResponse.SC_INTERNAL_SERVER_ERROR, ex.getMessage());
+        ex.printStackTrace();
+    }
+
 }

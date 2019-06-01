@@ -32,7 +32,7 @@ public final class WebappContextListener implements ServletContextListener {
 
             Context initCtx = new InitialContext();
             Context envCtx = (Context) initCtx.lookup("java:comp/env");
-            DataSource dataSource = (DataSource) envCtx.lookup("***");
+            DataSource dataSource = (DataSource) envCtx.lookup("jdbc/AJAX_Poets");
             ServletContext servletCtx = sce.getServletContext();
             servletCtx.setAttribute("dataSource", dataSource);
             return dataSource;

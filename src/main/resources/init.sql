@@ -3,9 +3,9 @@ DROP TABLE IF EXISTS poems CASCADE;
 
 CREATE TABLE poets (
     id serial PRIMARY KEY,
-    firstname varchar(30),
+    forename varchar(30),
     last_name varchar(30),
-    user_name varchar(30),
+    username varchar(30),
     password varchar(30)
 );
 
@@ -16,9 +16,9 @@ CREATE TABLE poems (
     poet_id int REFERENCES poets(id)
 );
 
-INSERT INTO poets (firstname, last_name, user_name, password) VALUES ('Howard Phillips', 'Lovecraft', 'hpl1890', 'feartheunkown');
-INSERT INTO poets (firstname, last_name, user_name, password) VALUES ('Edgar Allan', 'Poe', 'theR4ven', 'g0thLike');
-INSERT INTO poets (firstname, last_name, user_name, password) VALUES ('Ernest', 'Hemingway', 'icebergTheory', 'suicide1961');
+INSERT INTO poets (forename, last_name, username, password) VALUES ('Howard Phillips', 'Lovecraft', 'hpl1890', 'feartheunkown');
+INSERT INTO poets (forename, last_name, username, password) VALUES ('Edgar Allan', 'Poe', 'theR4ven', 'g0thLike');
+INSERT INTO poets (forename, last_name, username, password) VALUES ('Ernest', 'Hemingway', 'icebergTheory', 'suicide1961');
 
 INSERT INTO poems (title, content, poet_id) VALUES ('Yule Horror',
 'There is snow on the ground,
@@ -342,7 +342,7 @@ Live on and prosper,
 Unhampered now by his existence.',
 3);
 
-INSERT INTO poems (title, content, poet_id) VALUES ('Poem',
+INSERT INTO poems (title, content, poet_id) VALUES ('Poet',
 'The only man I ever loved
 Said good bye
 And went away

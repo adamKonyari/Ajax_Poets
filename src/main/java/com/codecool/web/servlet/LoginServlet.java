@@ -20,6 +20,7 @@ public class LoginServlet extends AbstractServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html;charset=UTF-8");
         try (Connection connection = getConnection(req.getServletContext())) {
             PoetDao poetDao = new DatabasePoetDao(connection);
             LoginService loginService = new SimpleLoginService(poetDao);

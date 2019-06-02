@@ -8,18 +8,23 @@
     <c:url value="/style/style.css" var="styleUrl"/>
     <c:url value="/script/index.js" var="indexScriptUrl"/>
     <c:url value="/script/login.js" var="loginScriptUrl"/>
+    <c:url value="/script/profile.js" var="profileScriptUrl"/>
     <link rel="stylesheet" type="text/css" href="${styleUrl}">
     <script src="${indexScriptUrl}"></script>
     <script src="${loginScriptUrl}"></script>
+    <script src="${profileScriptUrl}"></script>
 </head>
 <body>
 <div id="login-content" class="content">
     <h1>Login</h1>
     <form id="login-form" onsubmit="return false;">
-        <input type="text" name="email">
+        <input type="text" name="username">
         <input type="password" name="password">
         <button id="login-button">Login</button>
     </form>
+</div>
+<div id="profile-content" class="hidden content">
+    <p>Poet: <span id="poet-name"></span></p>
 </div>
 </body>
 </html>

@@ -22,9 +22,9 @@ public class SimpleLoginService implements LoginService {
             if (poet == null || !poet.getPassword().equals(password)) {
                 throw new ServiceException("Login failed");
             }
+            return poet;
         } catch (IllegalArgumentException ex) {
             throw new ServiceException(ex.getMessage());
         }
-        return null;
     }
 }

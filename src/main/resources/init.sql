@@ -16,7 +16,7 @@ CREATE TABLE poems (
     poet_id int REFERENCES poets(id)
 );
 
-INSERT INTO poets (forename, last_name, username, password) VALUES ('Howard Phillips', 'Lovecraft', 'hpl1890', 'feartheunkown');
+INSERT INTO poets (forename, last_name, username, password) VALUES ('Howard Phillips', 'Lovecraft', 'hpl1890', 'feartheunknown');
 INSERT INTO poets (forename, last_name, username, password) VALUES ('Edgar Allan', 'Poe', 'theR4ven', 'g0thLike');
 INSERT INTO poets (forename, last_name, username, password) VALUES ('Ernest', 'Hemingway', 'icebergTheory', 'suicide1961');
 

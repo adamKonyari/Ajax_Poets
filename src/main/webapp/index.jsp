@@ -26,5 +26,7 @@
 <div id="profile-content" class="hidden content">
     <p>Poet: <span id="poet-name"></span></p>
 </div>
+<div id="poem-title-list" class="hidden content">
+</div>
 </body>
 </html>

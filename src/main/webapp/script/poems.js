@@ -6,10 +6,13 @@ function onPoemClicked() {
         const poem = poemList[i];
         if (poemId == poem.id) {
             const pEl = document.createElement('p');
+            pEl.setAttribute('id', 'active-poem');
             pEl.innerHTML = poem.content;
             const poemDivEl = document.getElementById('poem-content');
             while (poemDivEl.firstChild) {
                 poemDivEl.removeChild(poemDivEl.firstChild);
+                showContents(['profile-content', 'poem-titles-content', 'poem-content', 'counter-content']);
+                document.getElementById('mag-glass').addEventListener("click", onMagGlassClicked);
             }
             poemDivEl.appendChild(pEl);
             break;

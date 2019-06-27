@@ -9,10 +9,12 @@
     <c:url value="/script/index.js" var="indexScriptUrl"/>
     <c:url value="/script/login.js" var="loginScriptUrl"/>
     <c:url value="/script/profile.js" var="profileScriptUrl"/>
+    <c:url value="/script/poems.js" var="poemsScriptUrl"/>
     <link rel="stylesheet" type="text/css" href="${styleUrl}">
     <script src="${indexScriptUrl}"></script>
     <script src="${loginScriptUrl}"></script>
     <script src="${profileScriptUrl}"></script>
+    <script src="${poemsScriptUrl}"></script>
 </head>
 <body>
 <div id="login-content" class="content">
@@ -26,7 +28,11 @@
 <div id="profile-content" class="hidden content">
     <p>Poet: <span id="poet-name"></span></p>
 </div>
-<div id="poem-title-list" class="hidden content">
+<div id="wrapper">
+    <div id="poem-titles-content" class="hidden content">
+    </div>
+    <div id="poem-content" class="hidden content">
+    </div>
 </div>
 </body>
 </html>

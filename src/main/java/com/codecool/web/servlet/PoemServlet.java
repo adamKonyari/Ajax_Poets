@@ -20,11 +20,13 @@ import java.util.List;
 public class PoemServlet extends AbstractServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html;charset=UTF-8");
         try (Connection connection = getConnection(req.getServletContext())) {
             PoemDao poemDao = new DatabasePoemDao(connection);
             PoemService poemService = new SimplePoemService(poemDao);
             int id = Integer.parseInt(req.getParameter("id"));
             List<Poem> poemList = poemService.getPoemsById(id);
+            sendMessage(resp, HttpServletResponse.SC_OK, poemList);
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ServiceException e) {

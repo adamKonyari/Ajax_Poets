@@ -9,3 +9,23 @@
 .hidden {
     display: none;
 }
+
+#profile-content {
+    text-align: center;
+    font-size: xx-large;
+}
+
+#wrapper {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#poem-titles-content {
+    border: 0.5px dotted;
+    float: left;
+}
+
+#poem-content {
+    border: 0.5px dotted;
+    overflow: hidden;
+}

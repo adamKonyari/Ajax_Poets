@@ -2,7 +2,7 @@ function onLoginResponse() {
     if (this.status === OK) {
         const poet = JSON.parse(this.responseText);
         setAuthorization(poet);
-        onProfileLoad(poet);
+        loadPoems(poet);
     }
 }
 

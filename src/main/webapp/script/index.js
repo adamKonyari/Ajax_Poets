@@ -75,10 +75,7 @@ function onLoad() {
     profileContentDivEl = document.getElementById('profile-content');
     const loginButtonEl = document.getElementById('login-button');
     loginButtonEl.addEventListener('click', onLoginButtonClicked);
-
-    if(hasAuthorization()) {
-        onProfileLoad(getAuthorization());
-    }
+    setUnauthorized();
 }
 
 document.addEventListener('DOMContentLoaded', onLoad);
